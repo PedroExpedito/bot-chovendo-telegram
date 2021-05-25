@@ -1,7 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace BotTempo {
+namespace BotTempo{
     public static class TratarString {
         public static string getStringNoSpecialChar(string str)
         {
