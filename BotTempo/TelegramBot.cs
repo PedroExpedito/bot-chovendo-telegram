@@ -1,15 +1,18 @@
 using System;
 using Telegram.Bot;
 using Telegram.Bot.Args;
-using System.Threading;
 
-namespace BotTempo {
+namespace BotTempo
+{
     class TelegramBot {
 
         static ITelegramBotClient botClient;
-        private static string token = "1693521384:AAEiFI1Gm9vLZcW-nGopDeDNMJC6_Dk6z-k";
+
 
         public void Start() {
+
+            string token = Environment.GetEnvironmentVariable("BOT_TEMPO");
+            Console.WriteLine("Token: "+token);
             botClient = new TelegramBotClient(token);
 
             var me = botClient.GetMeAsync().Result;
